@@ -17,10 +17,10 @@ class CreateSalesTable extends Migration
             $table->id();
             $table->integer('code')->unique();
             $table->dateTime('date');
-            $table->unsignedBigInteger('product_id')->nullable();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('set null');
             $table->unsignedBigInteger('client_id')->nullable();
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('set null');
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('set null');
             $table->float('total');
             $table->timestamps();
         });

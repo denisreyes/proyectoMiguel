@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
 
     public function sales(){
-        return $this->hasMany('App\Models\Sales');
+        return $this->hasMany('App\Models\Sale');
     }
     //relacion uno a muchos inveersa
     public function provider(){
